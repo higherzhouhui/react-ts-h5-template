@@ -1,0 +1,47 @@
+.am-tab-bar-bar .am-tab-bar-tab-image {
+  object-fit: contain;
+}
+
+.tabBar {
+  position: fixed;
+  bottom: 0;
+  background: @background-content;
+  left: 0;
+  width: 100vw;
+  height: calc(100px + constant(safe-area-inset-bottom));
+  height: calc(100px + env(safe-area-inset-bottom));
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
+  z-index: 100;
+  transition: 0.5s all;
+  border-top: @line-color 1px solid;
+}
+
+.tabBarItem {
+  font-size: 24px;
+  height: 100%;
+  flex: 1;
+  color: #9fabc0;
+
+  svg {
+    fill: #9fabc0;
+  }
+}
+
+.chooseed {
+  color: @hover-color;
+  svg {
+    fill: @hover-color;
+  }
+}
+
+.in_page {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.out_page {
+  transform: translate3d(0, 100%, 0);
+  opacity: 0;
+}
